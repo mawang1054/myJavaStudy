@@ -29,5 +29,16 @@ public class BigIntegerTest
                BigInteger.valueOf(i));
 
       System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
+      
+      int arrlength = in.nextInt();
+      int[] arr = new int[arrlength];
+      int index=0;
+      for (int j = 0; j < arr.length; j++) 
+      {
+		arr[j] = index;
+    	index++;
+      }
+      System.out.println(Arrays.toString(arr)+arr.length);
+      arrlength = in.nextInt();
    }
 }

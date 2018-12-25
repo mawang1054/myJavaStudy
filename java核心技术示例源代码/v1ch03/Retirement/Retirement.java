@@ -23,7 +23,8 @@ public class Retirement
 
       double balance = 0;
       int years = 0;
-
+      //int i = 1;
+      
       // update account balance while goal isn't reached
       while (balance < goal)
       {
@@ -32,8 +33,21 @@ public class Retirement
          double interest = balance * interestRate / 100;
          balance += interest;
          years++;
+         int i=1;
       }
 
+      //System.out.println(i);
+      
       System.out.println("You can retire in " + years + " years.");
+      
+      for (int i=1;i<3;i++) 
+      {
+    	  System.out.println(i);
+      }
+      
+      for (int i=1;i<3;i++) 
+      {
+    	  System.out.println(i);
+      }
    }
 }
