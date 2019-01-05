@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.Random;
 
 /**
  * This program demonstrates object construction.
@@ -34,7 +34,7 @@ class Employee
    // static initialization block
    static
    {
-      Random generator = new Random();
+	   java.util.Random generator = new java.util.Random();
       // set nextId to a random number between 0 and 9999
       nextId = generator.nextInt(10000);
    }
