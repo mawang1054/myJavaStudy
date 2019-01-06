@@ -5,3 +5,6 @@
 *.zip
 *.prefs
 *.xmi
+*.log
+*.ini
+
