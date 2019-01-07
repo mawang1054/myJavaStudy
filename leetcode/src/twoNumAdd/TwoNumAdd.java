@@ -43,7 +43,7 @@ public class TwoNumAdd {
 	}
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        long a=0,b=0,x=0,y=0;//错误方法，溢出错误
+        long a=0,b=0,x=0,y=0;//閿欒鏂规硶锛屼細鍙戠敓婧㈠嚭閿欒
         if (l1.next == null)
             a = l1.val;
         else{
