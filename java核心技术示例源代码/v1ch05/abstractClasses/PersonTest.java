@@ -18,5 +18,6 @@ public class PersonTest
       // print out names and descriptions of all Person objects
       for (Person p : people)
          System.out.println(p.getName() + ", " + p.getDescription());
+      
    }
 }
