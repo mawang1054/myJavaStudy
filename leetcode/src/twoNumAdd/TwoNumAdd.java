@@ -15,6 +15,7 @@ class ListNode {
 				break;
 			head = head.next;
 		}
+		System.out.println();
 	}
 	
 	public static ListNode creative(int[] nums) {
@@ -36,15 +37,34 @@ class ListNode {
 
 public class TwoNumAdd {
 	public static void main(String[] args) {
-		int[] nums1 = new int[] {9};
-		int[] nums2 = new int[] {1,9,9,9,9,9,9,9,9,9};
+		int[] nums1 = new int[] {2,4,3};
+		int[] nums2 = new int[] {5,6,4};
 		ListNode head1 = addTwoNumbers1(ListNode.creative(nums1),ListNode.creative(nums2));
 		ListNode.show(head1);
-		System.out.println();
-		int[] nums3 = new int[] {9};
-		int[] nums4 = new int[] {1,9,9,9,9,9,9,9,9,9};
-		ListNode head2 = addTwoNumbers2(ListNode.creative(nums3),ListNode.creative(nums4));
+		ListNode head2 = addTwoNumbers2(ListNode.creative(nums1),ListNode.creative(nums2));
 		ListNode.show(head2);
+		ListNode head3 = addTwoNumbers3(ListNode.creative(nums1),ListNode.creative(nums2));
+		ListNode.show(head3);
+	}
+	
+	public static ListNode addTwoNumbers3(ListNode l1, ListNode l2) {
+		ListNode head = new ListNode(0);
+		ListNode curr = head;
+		int carry = 0;
+		while (l1 != null || l2 != null) {
+			int x = (l1 != null)?l1.val:0;
+			int y = (l2 != null)?l2.val:0;
+			int sum = x + y + carry;		
+			curr.next = new ListNode(sum % 10);
+			curr = curr.next;
+			carry = sum / 10;
+			if (l1 != null) l1=l1.next;
+			if (l2 != null) l2=l2.next;
+		}
+		if (carry != 0) {
+			curr.next = new ListNode(carry);
+		}
+		return head.next;
 	}
 	
 	public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
