@@ -12,8 +12,9 @@ public class ArrayListTest
    public static void main(String[] args)
    {
       // fill the staff array list with three Employee objects
-      ArrayList<Employee> staff = new ArrayList<>();
+      ArrayList<Employee> staff = new ArrayList<>(10);
 
+      System.out.println(staff.size());
       staff.add(new Employee("Carl Cracker", 75000, 1987, 12, 15));
       staff.add(new Employee("Harry Hacker", 50000, 1989, 10, 1));
       staff.add(new Employee("Tony Tester", 40000, 1990, 3, 15));
