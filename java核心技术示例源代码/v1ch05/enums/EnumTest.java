@@ -14,6 +14,7 @@ public class EnumTest
       Scanner in = new Scanner(System.in);
       System.out.print("Enter a size: (SMALL, MEDIUM, LARGE, EXTRA_LARGE) ");
       String input = in.next().toUpperCase();
+      in.close();
       Size size = Enum.valueOf(Size.class, input);
       System.out.println("size=" + size);
       System.out.println("abbreviation=" + size.getAbbreviation());
