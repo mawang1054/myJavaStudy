@@ -39,6 +39,6 @@ class JNC extends Wine{
 public class DuotaiTest {
     public static void main(String[] args) {
         Wine a = new JNC();
-        a.fun1("a");
+        a.fun1();
     }
 }
