@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mawang.mybatis.mapper.OrderMapper">
+	<resultMap type="com.mawang.mybatis.pojo.Order" id="Order_map">
+		<id property="id" column="id"/>
+		<result property="userId" column="user_id"/>
+		<result property="number" column="number"/>
+		<result property="createtime" column="createtime"/>
+		<result property="note" column="note"/>
+	</resultMap>
+	
+	<select id="getOrderList" resultType="com.mawang.mybatis.pojo.Order" resultMap="Order_map">
+		SELECT `id`,`user_id`,`number`,`createtime`,`note` FROM `order`;
+	</select>
+	
+	<select id="getOrderUser" resultType="com.mawang.mybatis.pojo.OrderUser">
+		SELECT o.`id`,o.`user_id`,o.`number`,o.`createtime`,o.`note`,u.`username`,u.`address`
+		FROM `order` o LEFT JOIN `user` u ON u.`id` = o.`user_id`;
+	</select>
+	
+	<resultMap type="com.mawang.mybatis.pojo.Order" id="order_user_map">
+		<id property="id" column="id"/>
+		<result property="userId" column="user_id"/>
+		<result property="number" column="number"/>
+		<result property="createtime" column="createtime"/>
+		<result property="note" column="note"/>
+		<association property="user" javaType="com.mawang.mybatis.pojo.User">
+			<id property="id" column="id"/>
+			<result property="username" column="username"/>
+			<result property="address" column="address"/>
+			<result property="birthday" column="birthday"/>
+			<result property="sex" column="sex"/>
+		</association>
+	</resultMap>
+	
+	<select id="getOrderUserMap" resultType="com.mawang.mybatis.pojo.Order" resultMap="order_user_map">
+		SELECT 
+		  o.`id`,
+		  o.`user_id`,
+		  o.`number`,
+		  o.`createtime`,
+		  o.`note`,
+		  u.`username`,
+		  u.`address`,
+		  u.`birthday`,
+		  u.`sex`
+		FROM
+		  `order` o
+		LEFT JOIN `user` u
+		ON u.`id` = o.`user_id`;
+	</select>
+
+</mapper>

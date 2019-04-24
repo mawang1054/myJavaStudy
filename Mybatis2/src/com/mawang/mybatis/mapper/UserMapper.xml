@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mawang.mybatis.mapper.UserMapper">
+	<sql id="user_list">
+		`id`,`username`,`birthday`,`sex`,`address`
+	</sql>
+	
+	<select id="getUserById" parameterType="int" resultType="com.mawang.mybatis.pojo.User">
+		SELECT `id`,`username`,`birthday`,`sex`,`address` FROM `user` WHERE id = #{id};	
+	</select>
+	
+	<select id="getUserByUsername"  parameterType="String" resultType="com.mawang.mybatis.pojo.User">
+		SELECT `id`,`username`,`birthday`,`sex`,`address` FROM `user` WHERE username LIKE #{username};
+	</select>
+	
+	<insert id="insertUser" parameterType="com.mawang.mybatis.pojo.User" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO `user` (`username`,`birthday`,`sex`,`address`) VALUES (#{username},#{birthday},#{sex},#{address});
+	</insert>
+	
+	<!-- 第二天内容 -->
+	<select id="getUserByQueryVo"  parameterType="com.mawang.mybatis.pojo.QueryVo" resultType="com.mawang.mybatis.pojo.User">
+		SELECT `id`,`username`,`birthday`,`sex`,`address` FROM `user` WHERE username LIKE '%${user.username}%';
+	</select>
+	
+	<select id="getUserCount" resultType="int">
+		SELECT COUNT(1) FROM `user`;
+	</select>
+	
+	<select id="getUserByUser"  parameterType="com.mawang.mybatis.pojo.User" resultType="com.mawang.mybatis.pojo.User">
+		SELECT 
+			<include refid="user_list"/>
+		FROM `user` 
+		<where>
+			<if test="username != null and username != ''">
+				username LIKE '%${username}%'
+			</if>
+			<if test="sex != null and sex != ''">
+				sex = #{sex}
+			</if>
+		</where>
+
+	</select>
+	
+	<select id="getUserByIdIn" parameterType="com.mawang.mybatis.pojo.QueryVo" resultType="com.mawang.mybatis.pojo.User">
+		SELECT <include refid="user_list"/> FROM `user`
+ 		<where>
+ 			<foreach collection="ids" open="id In (" item="uid" separator="," close=")">
+ 				#{uid}
+ 			</foreach>
+ 		</where> 
+
+	</select>
+</mapper>

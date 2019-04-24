@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mawang.Mapper.UserMapper">
+	
+	<insert id="insert" parameterType="com.mawang.pojo.User">
+		INSERT INTO `test`.`user` (
+		  `username`,
+		  `password`,
+		  `gender`,
+		  `create_at`
+		) 
+		VALUES
+		  (
+		    #{username},
+		    #{password},
+		    #{gender},
+		    #{create_at}
+		  ) ;
+	</insert>
+	
+	<update id="update" parameterType="com.mawang.pojo.User">
+		UPDATE 
+		  `user` 
+		SET
+		  `username` = #{username},
+		  `password` = #{password},
+		  `gender` = #{gender},
+		  `create_at` = #{create_at}
+		WHERE `id` = #{id} ;
+	</update>
+	
+	<select id="select" parameterType="String" resultType="com.mawang.pojo.User">
+		SELECT 
+		  `id`,
+		  `username`,
+		  `password`,
+		  `gender`,
+		  `create_at` 
+		FROM
+		  `user` 
+		WHERE
+		  `username` = #{String};
+	</select>
+</mapper>

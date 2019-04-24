@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
-<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1545698752232_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1545698752232_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=剑指offer/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=美团笔试/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1545698752260_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1553740248126_4" label="Mybatis" name="Mybatis">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Mybatis1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Mybatis2" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554376105277_5" label="找工作" name="找工作">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/oj" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/携程笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/阿里笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/杂题" type="4"/>
+<item elementID="=剑指offer" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/微众银行笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/快手笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/拼多多笔试题" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/swardToOffer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/网易互娱笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/leetcode" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/华为笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/20190329面试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/完美世界笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/腾讯笔试" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/纽励科技笔试" type="4"/>
+<item elementID="=美团笔试" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554536644666_7" label="JavaWeb框架学习" name="JavaWeb框架学习">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JDBCDemo" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Mybatis2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Mybatis1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JDBC_DAO" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1545698753862_2" label="窗口工作集" name="Aggregate for window 1545698753862"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1546438776485_3" label="窗口工作集" name="Aggregate for window 1546438776485"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554536716770_8" label="多个工作集" name="Aggregate:找工作:Java Main Sources:Java Test Sources:JavaWeb框架学习:Mybatis:">
+<workingSet IMemento.internal.id="找工作"/>
+<workingSet IMemento.internal.id="Java Main Sources"/>
+<workingSet IMemento.internal.id="Java Test Sources"/>
+<workingSet IMemento.internal.id="JavaWeb框架学习"/>
+<workingSet IMemento.internal.id="Mybatis"/>
+</workingSet>
+<mruList name="找工作"/>
+<mruList name="Mybatis"/>
 </workingSetManager>

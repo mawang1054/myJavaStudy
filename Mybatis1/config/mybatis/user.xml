@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<select id="getUserById" parameterType="int" resultType="com.mawang.mybatis.pojo.User">
+		SELECT `id`,`username`,`birthday`,`sex`,`address` FROM `user` WHERE id = #{id};	
+	</select>
+	
+	<select id="getUserByUsername"  parameterType="string" resultType="com.mawang.mybatis.pojo.User">
+		SELECT `id`,`username`,`birthday`,`sex`,`address` FROM `user` WHERE username LIKE #{username};
+	</select>
+	
+	<insert id="insertUser" parameterType="com.mawang.mybatis.pojo.User" useGeneratedKeys="true" keyProperty="id">
+		<!-- 		<selectKey	resultType="int" keyProperty="id" order="AFTER">
+			select LAST_INSERT_ID()
+		</selectKey> -->
+
+		INSERT INTO `user` (`username`,`birthday`,`sex`,`address`) 
+		VALUES(#{username},#{birthday},#{sex},#{address});
+	</insert>
+	
+	<update id="updateUsername" parameterType="com.mawang.mybatis.pojo.User" >
+		UPDATE `user` SET `username` = #{username} WHERE `id` = #{id};
+	</update>
+	
+	<delete id="deleteUser" parameterType="int">
+		DELETE FROM `user` WHERE `id` = #{id} ;
+	</delete>
+</mapper>
